@@ -3,7 +3,7 @@
 // Application data
 const appData = {
   specialCases: {
-    "mantu_abcd": {"percentage": 95, "message": "A classic love story! ❤️"},
+    "mantu_sonakshi": {"percentage": 100, "message": "A classic love story! ❤️"},
   },
   loveQuotes: [
     "Love is not about possession, it's about appreciation! 💕",
