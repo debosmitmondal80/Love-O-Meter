@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love-O-Meter 💕 | Calculate Your Love Compatibility</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts">
+        <div class="heart heart-1">💕</div>
+        <div class="heart heart-2">💖</div>
+        <div class="heart heart-3">💗</div>
+        <div class="heart heart-4">💝</div>
+        <div class="heart heart-5">💘</div>
+        <div class="heart heart-6">💞</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="love-meter-card">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="title">
+                    <i class="fas fa-heart"></i>
+                    Love-O-Meter
+                    <i class="fas fa-heart"></i>
+                </h1>
+                <p class="subtitle">Discover your love compatibility! 💕</p>
+            </div>
+
+            <!-- Input Form -->
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="maleName" class="form-label">
+                        <i class="fas fa-mars"></i> Male Name
+                    </label>
+                    <input 
+                        type="text" 
+                        id="maleName" 
+                        class="form-control love-input" 
+                        placeholder="Enter male name"
+                        maxlength="50"
+                    >
+                </div>
+                
+                <div class="love-connector">
+                    <i class="fas fa-heart pulse-heart"></i>
+                </div>
+                
+                <div class="form-group">
+                    <label for="femaleName" class="form-label">
+                        <i class="fas fa-venus"></i> Female Name
+                    </label>
+                    <input 
+                        type="text" 
+                        id="femaleName" 
+                        class="form-control love-input" 
+                        placeholder="Enter female name"
+                        maxlength="50"
+                    >
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message hidden">
+                    ❌ Error: The creator's name cannot be used! Try someone else! 😄
+                </div>
+
+                <!-- Calculate Button -->
+                <button id="calculateBtn" class="btn btn--primary calculate-btn">
+                    
+                    Calculate Love!
+                    
+                </button>
+            </div>
+
+            <!-- Loading Animation -->
+            <div id="loadingSection" class="loading-section hidden">
+                <div class="loading-hearts">
+                    <div class="loading-heart">💗</div>
+                    <div class="loading-heart">💖</div>
+                    <div class="loading-heart">💕</div>
+                </div>
+                <p>Calculating your love compatibility...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section hidden">
+                <div class="percentage-display">
+                    <div class="percentage-circle">
+                        <span id="percentageText">0%</span>
+                    </div>
+                </div>
+
+                <div class="love-meter">
+                    <div class="meter-label">Love Meter</div>
+                    <div class="meter-bar">
+                        <div id="meterFill" class="meter-fill"></div>
+                    </div>
+                </div>
+
+                <div class="result-message">
+                    <h3 id="compatibilityMessage">Perfect Match!</h3>
+                    <p id="loveQuote">Love is in the air! 💕</p>
+                </div>
+
+                <div class="result-actions">
+                    <button id="tryAgainBtn" class="btn btn--secondary">
+                        <i class="fas fa-redo"></i>
+                        Try Again
+                    </button>
+                    <button id="shareBtn" class="btn btn--outline">
+                        <i class="fas fa-share"></i>
+                        Share Result
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>Made for fun and entertainment only!</p>
+                <p class="disclaimer">Results are for entertainment purposes only.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confettiContainer" class="confetti-container hidden"></div>
+
+    <!-- Heart Explosion Container -->
+    <div id="heartExplosion" class="heart-explosion hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
